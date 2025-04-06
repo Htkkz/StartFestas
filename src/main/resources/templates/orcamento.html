@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,12 +20,20 @@
             </li>
         </ul>
     </nav>
-        <img src="./img/Festas-removebg.png" alt="Logo Start Festas" class="imagem-banner">
+    <img src="./img/Festas-removebg.png" alt="Logo Start Festas" class="imagem-banner">
+    
+    <!-- Exibição da mensagem de sucesso -->
     <div class="solicitar-orcamento">
         <p>Solicitar um orçamento é rápido e fácil! Personalizamos nossos pacotes para atender às suas necessidades, incluindo opções de recreação, teatro, brinquedos e atividades educativas. Entre em contato conosco e descubra como podemos tornar sua festa especial dentro do seu orçamento.</p>
+        
+        <!-- Exibe a mensagem de sucesso se houver -->
+        <div th:if="${mensagem != null}" class="success-message">
+            <p>${mensagem}</p>
+        </div>
     </div>
+
     <div class="orcamento-form">
-        <form action="#" method="POST">
+        <form action="/orcamento/salvar" method="POST">
             <div class="form-group">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
@@ -47,8 +55,8 @@
             </div>
 
             <div class="form-group">
-                <label for="data">Data do Evento:</label>
-                <input type="date" id="data" name="data" required>
+                <label for="dataEvento">Data do Evento:</label>
+                <input type="date" id="dataEvento" name="dataEvento" required>
             </div>
 
             <div class="form-group">
@@ -57,8 +65,8 @@
             </div>
 
             <div class="form-group">
-                <label for="faixa-etaria">Faixa Etária:</label>
-                <select id="faixa-etaria" name="faixa-etaria" required>
+                <label for="faixaEtaria">Faixa Etária:</label>
+                <select id="faixaEtaria" name="faixaEtaria" required>
                     <option value="crianças">Crianças</option>
                     <option value="adultos">Adultos</option>
                     <option value="todas">Todas as Idades</option>
@@ -68,9 +76,9 @@
             <div class="form-group">
                 <label>Tipo de Serviço:</label>
                 <div class="checkbox-group">
-                    <label><input type="checkbox" name="servico" value="teatro"> Teatro</label>
-                    <label><input type="checkbox" name="servico" value="brinquedos"> Brinquedos</label>
-                    <label><input type="checkbox" name="servico" value="apresentacao-educativa"> Apresentação Educativa</label>
+                    <label><input type="checkbox" name="tipoServico" value="teatro"> Teatro</label>
+                    <label><input type="checkbox" name="tipoServico" value="brinquedos"> Brinquedos</label>
+                    <label><input type="checkbox" name="tipoServico" value="apresentacao-educativa"> Apresentação Educativa</label>
                 </div>
             </div>
             <div class="form-group">
@@ -78,6 +86,7 @@
             </div>
         </form>
     </div>
+
     <footer>
         <div class="footer-content">
             <div class="social-icons">

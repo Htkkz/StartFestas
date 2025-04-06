@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento Realizado com Sucesso</title>
+    <link rel="stylesheet" href="/css/sucesso.css">
+</head>
+<body>
+    <div class="sucesso-container">
+        <!-- Exibe um símbolo de "check" -->
+        <div class="check-symbol">&#10003;</div>
+        
+        <h2>Orçamento Registrado com Sucesso!</h2>
+        
+        <!-- Exibe as informações preenchidas -->
+        <div class="orcamento-info">
+            <p><strong>Nome:</strong> <span th:text="${orcamento.nome}"></span></p>
+            <p><strong>Email:</strong> <span th:text="${orcamento.email}"></span></p>
+            <p><strong>Telefone:</strong> <span th:text="${orcamento.telefone}"></span></p>
+            <p><strong>Endereço:</strong> <span th:text="${orcamento.endereco}"></span></p>
+            <p><strong>Data do Evento:</strong> <span th:text="${orcamento.dataEvento}"></span></p>
+            <p><strong>Observações:</strong> <span th:text="${orcamento.observacoes}"></span></p>
+            <p><strong>Faixa Etária:</strong> <span th:text="${orcamento.faixaEtaria}"></span></p>
+            <p><strong>Tipo de Serviço:</strong> <span th:text="${orcamento.tipoServico}"></span></p>
+        </div>
+        
+        <!-- Botão para voltar ao formulário -->
+        <div class="back-btn">
+            <a href="/orcamento">Voltar ao Formulário</a>
+        </div>
+    </div>
+</body>
+</html>
