@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento</title>
+    <link rel="stylesheet" href="/css/orcamento.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-title">
+            <h1>Orçamento</h1>
+        </div>
+        <ul>
+            <li>
+                 <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/galeria">Galeria</a>
+            </li>
+        </ul>
+    </nav>
+        <img src="./img/Festas-removebg.png" alt="Logo Start Festas" class="imagem-banner">
+    <div class="solicitar-orcamento">
+        <p>Solicitar um orçamento é rápido e fácil! Personalizamos nossos pacotes para atender às suas necessidades, incluindo opções de recreação, teatro, brinquedos e atividades educativas. Entre em contato conosco e descubra como podemos tornar sua festa especial dentro do seu orçamento.</p>
+    </div>
+    <div class="orcamento-form">
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" required>
+            </div>
+
+            <div class="form-group">
+                <label for="data">Data do Evento:</label>
+                <input type="date" id="data" name="data" required>
+            </div>
+
+            <div class="form-group">
+                <label for="observacoes">Observações:</label>
+                <textarea id="observacoes" name="observacoes"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="faixa-etaria">Faixa Etária:</label>
+                <select id="faixa-etaria" name="faixa-etaria" required>
+                    <option value="crianças">Crianças</option>
+                    <option value="adultos">Adultos</option>
+                    <option value="todas">Todas as Idades</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Tipo de Serviço:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="servico" value="teatro"> Teatro</label>
+                    <label><input type="checkbox" name="servico" value="brinquedos"> Brinquedos</label>
+                    <label><input type="checkbox" name="servico" value="apresentacao-educativa"> Apresentação Educativa</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Solicitar</button>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="#" class="social-icon">
+                    <img src="./img/facebook-icon (1).png" alt="Facebook">
+                </a>
+                <a href="#" class="social-icon">
+                    <img src="./img/instagram-icon.png" alt="Instagram">
+                </a>
+            </div>
+            <p class="footer-text">2025 - Start Festas - Encantamos crianças, tranquilizamos pais e transformamos momentos em memórias inesquecíveis!</p>
+        </div>
+    </footer>
+</body>
+</html>
